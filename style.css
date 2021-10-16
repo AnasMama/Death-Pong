@@ -38,6 +38,49 @@ h1 {
     margin: 8em 1em 0 1em;
 }
 
+/* Dessin des yeux de Ryuk */
+.eyes {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    z-index: -1;
+    left: 50vh;
+}
+
+.eyes-left {
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+    width: .3px;
+    height: .3px;
+    background-color: red;
+    /* box-shadow: 4px -4px 15px 0px #FF1F1F, 0px 0px 44px 50px #FF0000; */
+    animation: eyes 5s linear infinite;
+}
+.eyes-right {
+    border-radius: 100%;
+    position: absolute;
+    right: 0;
+    width: .3px;
+    height: .3px;
+    background-color: red;
+    /* box-shadow: 4px -4px 15px 0px #FF1F1F, 0px 0px 44px 50px #FF0000; */
+    animation: eyes 5s linear infinite;
+}
+@keyframes eyes {
+    0% {
+        box-shadow: 4px -4px 15px 0px #FF1F1F, 0px 0px 44px 50px #FF0000;
+    }
+    50%{
+        box-shadow: 0px 0px 44px 50px #CE0202, 0px 0px 44px 50px #CE7215, 0px 0px 44px 50px #CEBB11, 0px 0px 44px 50px #E2E312, 0px 0px 44px 50px #E2E312;
+    }
+    100%{
+        box-shadow: 4px -4px 15px 0px #FF1F1F, 0px 0px 44px 50px #FF0000;
+    }
+}
+
 /* Mise en page de la partie death note */
 .header-death-note {
     padding: .7em;

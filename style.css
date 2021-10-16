@@ -1,0 +1,33 @@
+
+:root {
+    --couleur-fond: #261C14;
+    --couleur-text: #D9C6B0;
+
+}
+
+ @font-face {
+    font-family: 'death-note';
+    src: url("./src/death-note-font.ttf");
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+   background-color: var(--couleur-fond);
+   font-family: 'death-note';
+   color: var(--couleur-text);
+}
+.main {
+    
+}
+.death-note {
+    width: 45%;
+    height: 80vh;
+    background-color: rgb(75, 75, 75);
+}
+.death-pong {
+    width: 45%;
+    height: 80vh;
+    background-color: aquamarine;
+}

@@ -1,29 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Death Pong of the Shadow of Love</title>
-    <link rel="stylesheet" href="style.css"></link>
-</head>
-<body>
-    <section class=death-list>
-        <h2>A tuer :</h2>
-        <form class=firstname-form method="post" action="traitement.php">
-            <label for="firstname" class="firstnam-text">La personne à tuer : </label>
-            <input type="text" class="firstname-input" name="firstname" placeholder="Prénom" size="30" maxlength="25" value="" autofocus />
-            <input type="submit" name="send" value="Envoyer !" class="firstname-submit">
-        </form>
-        <div class=death-list>
-            <h2>Liste des morts : </h2>
-            <ul class="death-person">
-                <li>kkkkllllppp</li>
-            <!-- <li></li> -->
-            </ul>
-        </div>
-    </section>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Death Pong of the Shadow of Love</title>
+        <link rel="stylesheet" href="style.css"></link>
+    </head>
+    <body>
+        <div class="main">
+        <h1>death-pong</h1>
+        <section class="death-note">
+            <h2>A tuer :</h2>
+            <form class="firstname-form" method="post" action="traitement.php">
+                <label for="firstname" class="firstnam-text">La personne à tuer : </label>
+                <input type="text" class="firstname-input" name="firstname" placeholder="Prénom" size="30" maxlength="25" value="" autofocus />
+                <input type="submit" name="send" value="Envoyer !" class="firstname-submit">
+            </form>
+            <div class="death-list">
+                <h2>Liste des morts : </h2>
+                <ul class="death-person">
+                    <li>kkkkllllppp</li>
+                <!-- <li></li> -->
+                </ul>
+            </div>
+        </section>
+        <section class="death-pong">
+            <div class="pong-container">
 
-    <script src="index.js"></script>
-</body>
-</html>
+            </div>
+        </section>
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+    </html>

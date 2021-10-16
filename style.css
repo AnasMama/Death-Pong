@@ -3,6 +3,8 @@
 :root {
     --couleur-fond: #261C14;
     --couleur-text: #D9C6B0;
+    --death-font: 'death-note';
+    --other-font: 'gloria';
     font-size: 18px;
     
 }
@@ -10,13 +12,17 @@
     font-family: 'death-note';
     src: url("./src/death-note-font.ttf");
 }
+@font-face {
+    font-family: 'gloria';
+    src: url("./src/GloriaHallelujah-Regular.ttf");
+}
 * {
     margin: 0;
     padding: 0;
 }
 body {
     background-color: var(--couleur-fond);
-    font-family: 'death-note';
+    font-family: var(--death-font);
     color: var(--couleur-text);
 }
 h1 {
@@ -27,7 +33,8 @@ h1 {
 /* Placement des box contenant le death note et le pong */
 .main {
     display: flex;
-    margin: 0 1em 0 1em;
+    justify-content: space-between;
+    margin: 8em 1em 0 1em;
 }
 
 /* Mise en page de la partie death note */
@@ -40,28 +47,43 @@ h1 {
 .header-death-note > h2 {
     padding: .3em;
 }
+.firstname-form {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    font-size: 1.3rem;
+    margin-bottom: 3em;
+}
 .firstname-input{
+    margin-left: .5em;
     background-color: rgb(166, 147, 124, .5);
     color: var(--couleur-text);
     border-radius: 12px;
     height: 2rem;
-    border: none;
 }
 .firstname-input::placeholder {
     color: var(--couleur-text);
-    padding: .3em;
+    padding: .4em;
+    font-size: 1rem;
+    font-family: var(--death-font);
 }
+
+/* style de la liste de morts */
 .death-list {
     padding: .5em;
 }
 .death-person {
     margin-top: 1em;
 }
+.dead {
+    font-family: var(--other-font);
+    font-size: 1.2rem;
+}
 .death-person li {
-    padding-top: .3em;
     list-style: none;
 }
-
 .death-note {
     padding: .5em;
     width: 45%;
@@ -71,5 +93,5 @@ h1 {
 .death-pong {
     width: 45%;
     height: 80vh;
-    background-color: aquamarine;
+    background-color: rgb(100, 100, 100);
 }

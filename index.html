@@ -8,21 +8,31 @@
     <link rel="stylesheet" href="style.css"></link>
 </head>
 <body>
-    <section class=death-list>
-        <h2>A tuer :</h2>
-        <form class=firstname-form method="post" action="traitement.php">
-            <label for="firstname" class="firstnam-text">La personne à tuer : </label>
-            <input type="text" class="firstname-input" name="firstname" placeholder="Prénom" size="30" maxlength="25" value="" autofocus />
-            <input type="submit" name="send" value="Envoyer !" class="firstname-submit">
-        </form>
-        <div class="timer"></div>
-        <div class="score"></div>
-        <div class=death-list>
-            <h2>Liste des morts : </h2>
-            <ul class="death-person">
-            </ul>
-        </div>
-    </section>
+    <h1>death-pong</h1>
+    <div class="main">
+        <section class="death-note">
+            <div class="header-death-note">
+                <h2>A tuer :</h2>
+                <form class="firstname-form" method="post" action="traitement.php">
+                    <label for="firstname" class="firstnam-text">La personne a tuer : </label>
+                    <input type="text" class="firstname-input" name="firstname" placeholder="Prénom" size="30" maxlength="25" value="" autofocus />
+                    <input type="submit" name="send" value="Tuer !" class="firstname-submit">
+                </form>
+            </div>
+            <div class="death-list">
+                <h2>Liste des morts : </h2>
+                <ul class="death-person">
+                    <!-- <li></li> -->
+                </ul>
+            </div>
+        </section>
+        <section class="death-pong">
+            <div class="pong-container">
+                
+            </div>
+        </section>
+    </div>
+    
 
     <script src="index.js"></script>
 </body>

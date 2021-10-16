@@ -22,20 +22,27 @@
     padding: 0;
 }
 body {
-    background-color: var(--couleur-fond);
     font-family: var(--death-font);
     color: var(--couleur-text-light);
+    background-color: var(--couleur-fond);
 }
 h1 {
     text-align: center;
     padding: 1rem;
 }
-
+.ryuk > img{
+    position: absolute;
+    width: 100vh;
+    height: 100%;
+    left: 40vh;
+    z-index: -1;
+    mix-blend-mode: multiply;
+}
 /* Placement des box contenant le death note et le pong */
 .main {
     display: flex;
     justify-content: space-between;
-    margin: 8em 1em 0 1em;
+    margin: 5.5em 1em 0 1em;
 }
 
 /* Dessin des yeux de Ryuk */
@@ -46,7 +53,8 @@ h1 {
     height: 300px;
     position: absolute;
     z-index: -1;
-    left: 50vh;
+    left: 65vh;
+    top: 20vh;
 }
 
 .eyes-left {
@@ -96,7 +104,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 90%;
+    width: 100%;
     font-size: 1.3rem;
     margin-bottom: 2em;
 }
@@ -116,14 +124,25 @@ h1 {
     font-size: 1rem;
     font-family: var(--death-font);
 }
+.firstname-submit {
+    border-radius: 70%;
+    background-color: rgba(199, 17, 53, 0.753);
+    height: 60px;
+    width: 60px;
+    border: none;
+    font-family: var(--death-font);
+}
+.firstname-submit:hover {
+    cursor: pointer;
+}
 
 /* style de la liste de morts */
 .death-list {
     padding: 1.3em;
     color: var(--couleur-text-dark);
     background: url("./src/posters-vide-vieux-fond-de-papier-parchemin-vintage.jpg.jpg");
-    height: 50vh;
-    width: 90%;
+    height: 40vh;
+    width: 92%;
     border-radius: 10px;
 }
 .death-person {
@@ -142,15 +161,12 @@ h1 {
 }
 .death-note {
     width: 45%;
-    height: 80vh;
-    background-color: rgb(75, 75, 75);
+    height: 70vh;
     border-radius: 10px;
 }
 .death-pong {
-    width: 45%;
+    width: 50%;
     height: 80vh;
-    background-color: rgb(100, 100, 100);
-    border-radius: 10px;
 }
 
 /* css du canvas */

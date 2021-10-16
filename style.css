@@ -2,7 +2,8 @@
 /* paramètres de base */
 :root {
     --couleur-fond: #261C14;
-    --couleur-text: #D9C6B0;
+    --couleur-text-light: #D9C6B0;
+    --couleur-text-dark: #402F20;
     --death-font: 'death-note';
     --other-font: 'gloria';
     font-size: 18px;
@@ -23,7 +24,7 @@
 body {
     background-color: var(--couleur-fond);
     font-family: var(--death-font);
-    color: var(--couleur-text);
+    color: var(--couleur-text-light);
 }
 h1 {
     text-align: center;
@@ -54,17 +55,17 @@ h1 {
     align-items: center;
     width: 90%;
     font-size: 1.3rem;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
 }
 .firstname-input{
     margin-left: .5em;
     background-color: rgb(166, 147, 124, .5);
-    color: var(--couleur-text);
+    color: var(--couleur-text-light);
     border-radius: 12px;
     height: 2rem;
 }
 .firstname-input::placeholder {
-    color: var(--couleur-text);
+    color: var(--couleur-text-light);
     padding: .4em;
     font-size: 1rem;
     font-family: var(--death-font);
@@ -72,20 +73,28 @@ h1 {
 
 /* style de la liste de morts */
 .death-list {
-    padding: .5em;
+    padding: 1.3em;
+    color: var(--couleur-text-dark);
+    background: url("./src/posters-vide-vieux-fond-de-papier-parchemin-vintage.jpg.jpg");
+    height: 50vh;
+    width: 90%;
+    border-radius: 10px;
 }
 .death-person {
+    display: flex;
+    height: 50vh;
+    flex-flow: column wrap;
     margin-top: 1em;
 }
 .dead {
     font-family: var(--other-font);
     font-size: 1.2rem;
+    color: var(--couleur-text-dark);
 }
 .death-person li {
     list-style: none;
 }
 .death-note {
-    padding: .5em;
     width: 45%;
     height: 80vh;
     background-color: rgb(75, 75, 75);

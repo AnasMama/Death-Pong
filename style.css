@@ -1,11 +1,12 @@
 
+/* paramètres de base */
 :root {
     --couleur-fond: #261C14;
     --couleur-text: #D9C6B0;
-
+    font-size: 18px;
+    
 }
-
- @font-face {
+@font-face {
     font-family: 'death-note';
     src: url("./src/death-note-font.ttf");
 }
@@ -14,14 +15,55 @@
     padding: 0;
 }
 body {
-   background-color: var(--couleur-fond);
-   font-family: 'death-note';
-   color: var(--couleur-text);
+    background-color: var(--couleur-fond);
+    font-family: 'death-note';
+    color: var(--couleur-text);
 }
+h1 {
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Placement des box contenant le death note et le pong */
 .main {
-    
+    display: flex;
+    margin: 0 1em 0 1em;
 }
+
+/* Mise en page de la partie death note */
+.header-death-note {
+    padding: .7em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-death-note > h2 {
+    padding: .3em;
+}
+.firstname-input{
+    background-color: rgb(166, 147, 124, .5);
+    color: var(--couleur-text);
+    border-radius: 12px;
+    height: 2rem;
+    border: none;
+}
+.firstname-input::placeholder {
+    color: var(--couleur-text);
+    padding: .3em;
+}
+.death-list {
+    padding: .5em;
+}
+.death-person {
+    margin-top: 1em;
+}
+.death-person li {
+    padding-top: .3em;
+    list-style: none;
+}
+
 .death-note {
+    padding: .5em;
     width: 45%;
     height: 80vh;
     background-color: rgb(75, 75, 75);

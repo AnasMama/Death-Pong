@@ -87,3 +87,99 @@ const reduceTimer = () => {
     }
 }
 setInterval(reduceTimer, 1000);
+
+
+
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+
+var x = canvas.width/2;
+var y = canvas.height-30;
+// Variable ball
+var dx = 2;
+var dy = -2;
+var ballRadius = 15;
+// Variable paddle
+var paddleHeight = 10;
+var paddleWidth = 120;
+var paddleX = (canvas.width-paddleWidth)/2;
+var rightPressed = false;
+var leftPressed = false;
+
+let lineaire2 = ctx.createLinearGradient(150, 25, 275, 125);
+lineaire2.addColorStop(0,'#DD4'); //Jaune
+lineaire2.addColorStop(1, '#D44'); //Rouge
+
+function drawBall() {
+    ctx.beginPath();
+    ctx.arc(x, y, ballRadius, 0, Math.PI*2);
+    ctx.fillStyle = lineaire2;
+    ctx.fill();
+    ctx.closePath();
+}
+function drawPaddle() {
+    ctx.beginPath();
+    ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
+    ctx.fillStyle = "black";
+    ctx.fill();
+    ctx.closePath();
+}
+
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
+
+function keyDownHandler(element) {
+    if(element.key == "Right" || element.key == "ArrowRight") {
+        rightPressed = true;
+    }
+    else if(element.key == "Left" || element.key == "ArrowLeft") {
+        leftPressed = true;
+    }
+}
+function keyUpHandler(element) {
+    if(element.key == "Right" || element.key == "ArrowRight") {
+        rightPressed = false;
+    }
+    else if(element.key == "Left" || element.key == "ArrowLeft") {
+        leftPressed = false;
+    }
+}
+
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawBall();
+    drawPaddle();
+      x += dx;
+      y += dy;
+    if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+          dx = -dx;
+    }
+    // sol = game over
+    if(y + dy < ballRadius) {
+        dy = -dy;
+    } else if(y + dy > canvas.height-ballRadius) {
+        if(x >= paddleX && x <= paddleX + paddleWidth) {
+            dy = -dy;
+        }
+        else {
+            alert("GAME OVER");
+            document.location.reload();
+            clearInterval(interval);
+        }
+    }
+    
+    if(rightPressed) {
+          paddleX += 7;
+      if (paddleX + paddleWidth > canvas.width){
+              paddleX = canvas.width - paddleWidth;
+          }
+    }
+    else if(leftPressed) {
+          paddleX -= 7;
+        if (paddleX < 0){
+              paddleX = 0;
+          }
+      }
+    }
+
+    var interval = setInterval(draw, 10);

@@ -98,9 +98,23 @@ h1 {
     width: 45%;
     height: 80vh;
     background-color: rgb(75, 75, 75);
+    border-radius: 10px;
 }
 .death-pong {
     width: 45%;
     height: 80vh;
     background-color: rgb(100, 100, 100);
+    border-radius: 10px;
+}
+
+/* css du canvas */
+.pong-container {
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+#myCanvas {
+    /* background-color: whitesmoke; */
+    background-image: url("https://i.redd.it/hwh4e802o1m41.jpg");
+    border-radius: 10px;
 }

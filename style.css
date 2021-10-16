@@ -57,6 +57,9 @@ h1 {
     font-size: 1.3rem;
     margin-bottom: 2em;
 }
+.timer, .score {
+    letter-spacing: 4px;
+}
 .firstname-input{
     margin-left: .5em;
     background-color: rgb(166, 147, 124, .5);

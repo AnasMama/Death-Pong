@@ -59,6 +59,12 @@ form.onsubmit = function(event) {
         alert("Tu t'es suicidé... imbécile...");
         location.reload();
     }
+    if(submitFirstname.value == "thomas" && promo.includes("thomas")){
+        alert("Haha bien joué ! Il a cru qu'il pouvait négocier avec les dévelopeurs du jeu pour être immortel. Que nenni !");
+    }
+    if(submitFirstname.value == "léo" && promo.includes("léo")){
+        alert("Lui ? Ah je vois ! Tu souhaites gagner les prochains coding game ?");
+    }
     
     for(let i=0; i<promo.length; i++){
         if(submitFirstname.value == promo[i]){
@@ -81,18 +87,19 @@ form.onsubmit = function(event) {
 const reduceTimer = () => {
     temps --;
     timerElement.innerHTML = "Il te reste " + temps + " secondes.";
-    if(promo.length == 0){
-        alert("Bon ba t'as tué tous le monde... POULOULOU comment c'est trop la classe !");
+    if(promo.length == 0 || score == 26){
+        alert("Bon ba t'as tué tous le monde... POULOULOU comment c'est trop la classe ! Je te laisse découvrir mon secret...");
+        window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ");
         location.reload();
     }
-    if(temps == 0){
+    if(temps == 0 || temps < 0){
         if(score < 10){
             alert("C'est FINI bro' !!! Ton score est de " + score + ". Franchement c'est pas ouf...");
         } else if(score < 20){
             alert("C'est FINI bro' !!! Ton score est de " + score + ". Pas mal mais bon tu peux faire mieux non ?");
         } else if(score >= 20){
             alert("C'est FINI bro' !!! Ton score est de " + score + ". P'sartek !");
-        }
+        } 
         location.reload();
     }
 }

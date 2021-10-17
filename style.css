@@ -2,7 +2,8 @@
 /* paramètres de base */
 :root {
     --couleur-fond: #261C14;
-    --couleur-text-light: #D9C6B0;
+    /* --couleur-text-light: #d9c6b0; */
+    --couleur-text-light: #f3eee8;
     --couleur-text-dark: #402F20;
     --death-font: 'death-note';
     --other-font: 'gloria';
@@ -22,37 +23,51 @@
     padding: 0;
 }
 body {
-    background-color: var(--couleur-fond);
+    /* background-color: var(--couleur-fond); */
+    background-color: black;
+    background-image: url("https://img1.goodfon.com/original/1920x1080/b/25/leather-black-dark-pattern.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: var(--death-font);
     color: var(--couleur-text-light);
+    font-size: 0.8em;
+    max-width: auto;
+    margin: auto;
 }
 h1 {
     text-align: center;
     padding: 1rem;
+    margin-bottom: 1em;
 }
-
+.header {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    /* margin-top: 1em; */
+}
 /* Placement des box contenant le death note et le pong */
 .main {
     display: flex;
-    justify-content: space-between;
-    margin: 8em 1em 0 1em;
+    justify-content: space-evenly;
+    margin: auto;
 }
 
 /* Dessin des yeux de Ryuk */
 .eyes {
     display: flex;
-    justify-content: space-between;
-    width: 400px;
+    justify-content: space-around;
+    /* margin: auto; */
+    width: 100em;
     height: 300px;
-    position: absolute;
-    z-index: -1;
-    left: 50vh;
+    /* position: absolute; */
+    /* z-index: -1;
+    left: 50vh; */
 }
 
 .eyes-left {
     border-radius: 100%;
-    position: absolute;
-    left: 0;
+    /* position: absolute;
+    left: 0; */
     width: .3px;
     height: .3px;
     background-color: red;
@@ -61,8 +76,8 @@ h1 {
 }
 .eyes-right {
     border-radius: 100%;
-    position: absolute;
-    right: 0;
+    /* position: absolute;
+    right: 0; */
     width: .3px;
     height: .3px;
     background-color: red;
@@ -103,6 +118,11 @@ h1 {
 .timer, .score {
     letter-spacing: 4px;
 }
+.firstname-submit{
+    padding: 0.5em;
+    font-size: medium;
+    font-weight: 500;
+}
 .firstname-input{
     margin-left: .5em;
     background-color: rgb(166, 147, 124, .5);
@@ -122,9 +142,12 @@ h1 {
     padding: 1.3em;
     color: var(--couleur-text-dark);
     background: url("./src/posters-vide-vieux-fond-de-papier-parchemin-vintage.jpg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 50vh;
     width: 90%;
-    border-radius: 10px;
+    border-radius: 20px;
+    margin: auto;
 }
 .death-person {
     display: flex;
@@ -141,16 +164,21 @@ h1 {
     list-style: none;
 }
 .death-note {
-    width: 45%;
-    height: 80vh;
+    width: 40%;
+    /* max-width: 45%; */
+    /* height: 32em; */
     background-color: rgb(75, 75, 75);
-    border-radius: 10px;
+    border-radius: 20px;
+    padding-bottom: 1em;
 }
 .death-pong {
-    width: 45%;
-    height: 80vh;
-    background-color: rgb(100, 100, 100);
-    border-radius: 10px;
+    display: flex;
+    /* width: 40%; */
+    /* height: 32em; */
+    /* background-color: rgb(100, 100, 100); */
+    background-color: none;
+    border-radius: 20px;
+    align-items: center;
 }
 
 /* css du canvas */
@@ -162,5 +190,49 @@ h1 {
 #myCanvas {
     /* background-color: whitesmoke; */
     background-image: url("https://i.redd.it/hwh4e802o1m41.jpg");
-    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    margin: auto;
+}
+
+
+
+/* page d'intro */
+.intro {
+    text-indent: 1em;
+    font-size: large;
+    display: flex;
+    width: 50%;
+    /* height: 40em; */
+    flex-direction: column;
+    justify-content: space-around;
+}
+.intro ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 18em;
+    margin: 1em;
+}
+
+.credit {
+    text-align:center;
+}
+.credit ul{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50em;
+
+}
+
+.header-page {
+    display: flex;
+    justify-content: start;
+    font-size: medium;
+    color: var(--couleur-text-light);
+}
+.header-page a {
+    margin: 1em;
 }

@@ -57,6 +57,7 @@ h1 {
 .eyes {
     display: flex;
     justify-content: space-around;
+
     /* margin: auto; */
     width: 100vw;
     height: 300px;

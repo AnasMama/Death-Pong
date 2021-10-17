@@ -56,7 +56,8 @@ form.onsubmit = function(event) {
     event.preventDefault();
 
     if(submitFirstname.value == "anas" || submitFirstname.value == "cyril"){
-        alert("IMPOSSIBLE !!! Cet homme est immortel !");
+        alert("IMPOSSIBLE !!! Cet homme est immortel ! Tu perds 10s...");
+        temps -= 10;
     }
     if(submitFirstname.value == firstname){
         alert("Tu t'es suicidé... imbécile...");
@@ -175,7 +176,7 @@ function draw() {
             dy = -dy;
         }
         else {
-            alert("GAME OVER");
+            alert("MA POMME !!! C'est ennuyant... Je vais devoir écrire ton nom... " + firstname + "...");
             document.location.reload();
             clearInterval(interval);
         }

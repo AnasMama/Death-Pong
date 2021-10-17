@@ -3,6 +3,7 @@ const submitFirstname = document.querySelector(".firstname-input");
 const deathPerson = document.querySelector(".death-person");
 
 
+
 const promo = [
     "geoffroy",
     "bastien",
@@ -43,14 +44,9 @@ for(let i=0; i<promo.length; i++){
     }
 }
 
+
 // Fonction pour jouer le son pour l'écriture du nom de la personne
 const song = new Audio('./src/Audio.mp3');
-// const playAudio = (person) => {
-//     const personLength = person.length;
-//     for (let i = 0; i < personLength; i++){
-//         song.play();
-//     }
-// }
 
 form.onsubmit = function(event) {
     event.preventDefault();
@@ -69,6 +65,7 @@ form.onsubmit = function(event) {
             const dead = document.createElement("li");
             // playAudio(deathPerson);
             song.play();
+            
             dead.innerHTML = submitFirstname.value;
             dead.classList.add("dead");
             deathPerson.appendChild(dead);

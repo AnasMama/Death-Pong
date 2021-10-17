@@ -46,7 +46,7 @@ for(let i=0; i<promo.length; i++){
 
 
 // Fonction pour jouer le son pour l'écriture du nom de la personne
-const song = new Audio('./src/Audio.mp3');
+const song = new Audio('./assets/Audio.mp3');
 
 form.onsubmit = function(event) {
     event.preventDefault();

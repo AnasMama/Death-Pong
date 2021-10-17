@@ -8,26 +8,32 @@
     <link rel="stylesheet" href="style.css"></link>
 </head>
 <body>
-    <h1>death-pong</h1>
+    <div class=header>
+        <div class=header-page>
+            <a href="intro.html">Règle</a>
+            <a href="index.html">Jeu</a>
+            <a href="credit.html">Crédit</a>
+        </div>
+        <h1>death-pong</h1>
     <audio src="./src/deathnotes-theme.mp3" autoplay></audio>
-    <div class="eyes">
+      <div class="eyes">
         <div class="eyes-left"></div>
         <div class="eyes-right"></div>
+       </div> 
+
     </div>
     <div class="main">
         <section class="death-note">
             <div class="header-death-note">
-                <h2>A tuer :</h2>
+                <!-- <h2>A tuer :</h2> -->
                 <form class="firstname-form" method="post" action="traitement.php">
                     <label for="firstname" class="firstnam-text">La personne a tuer : </label>
                     <input type="text" class="firstname-input" name="firstname" placeholder="Prénom" size="30" maxlength="25" value="" autofocus />
-                    <input type="submit" name="send" value="Tuer !" class="firstname-submit">
+                    <input type="submit" name="send" value="A tuer !" class="firstname-submit">
                 </form>
                 <div class="timer"></div>
                 <div class="score"></div>
             </div>
-            <div class="timer"></div>
-            <div class="score"></div>
             <div class="death-list">
                 <h2>Liste des morts : </h2>
                 <ul class="death-person">
@@ -38,7 +44,7 @@
         <section class="death-pong">
             <div class="pong-container">
                 <!-- <canvas id="myCanvas" widht="600" height="500"></canvas> -->
-                <canvas id="myCanvas" width="695" height="605"></canvas>
+                <canvas id="myCanvas" width="480px" height="530px"></canvas>
             </div>
         </section>
     </div>

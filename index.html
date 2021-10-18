@@ -16,11 +16,6 @@
             <a href="highscore.html">Highscore</a>
         </div>
         <h1>death-pong</h1>
-    <audio src="./src/deathnotes-theme.mp3" autoplay></audio>
-    <!-- <div class="eyes">
-        <div class="eyes-left"></div>
-        <div class="eyes-right"></div>
-    </div>  -->
 
     </div>
     <div class="main">
@@ -30,7 +25,9 @@
                 <form class="firstname-form" method="post" action="traitement.php">
                     <label for="firstname" class="firstnam-text">La personne a tuer : </label>
                     <input type="text" class="firstname-input" name="firstname" placeholder="Prénom" size="30" maxlength="25" value="" autofocus />
+
                     <input type="submit" name="send" value="Tuer" class="firstname-submit">
+                  
                 </form>
                 <div class="timer"></div>
                 <div class="score"></div>
@@ -52,5 +49,6 @@
     
 
     <script src="index.js"></script>
+    <script src="song.js"></script>
 </body>
 </html>

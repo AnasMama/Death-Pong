@@ -229,6 +229,7 @@ h1 {
     /* height: 40em; */
     flex-direction: column;
     justify-content: space-around;
+    margin: auto;
 }
 .intro ol {
     display: flex;
@@ -258,3 +259,28 @@ h1 {
 .header-page a {
     margin: 1em;
 }
+
+/* tableau des highscores  */
+.best-player h1 {
+    margin: 3em 0em 3em 0em;
+}
+.highscore {
+    display: flex;
+    flex-direction: column;
+    text-indent: 1em;
+    font-size: large;
+}
+.highscore tr {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+    max-width: 50%;
+    margin: auto;
+}
+
+/* .smile {
+    display: flex;
+    margin: auto;
+    width: 1500px;
+    padding: -500px;
+} */

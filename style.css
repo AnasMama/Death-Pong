@@ -255,6 +255,10 @@ h1 {
 }
 
 /* tableau des highscores  */
+
+.best-player {
+    /* text-align: center; */
+}
 .best-player h1 {
     margin: 3em 0em 3em 0em;
 }
@@ -263,13 +267,22 @@ h1 {
     flex-direction: column;
     text-indent: 1em;
     font-size: large;
+    
 }
 .highscore tr {
     display: flex;
     /* flex-direction: column; */
-    justify-content: space-evenly;
+    justify-content: space-around;
     max-width: 50%;
     margin: auto;
+}
+
+.highscore td {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    text-align: center;
+    margin: 1em;
 }
 
 /* .smile {

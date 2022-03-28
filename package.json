@@ -1,0 +1,6 @@
+{
+  "type": "commonjs",
+  "dependencies": {
+    "sweetalert2": "^11.4.6"
+  }
+}

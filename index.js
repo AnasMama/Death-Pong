@@ -1,10 +1,8 @@
-// import Swal from "sweetalert2";
+// import Swal from "sweetalert2"
 
 const form = document.querySelector(".firstname-form");
 const submitFirstname = document.querySelector(".firstname-input");
 const deathPerson = document.querySelector(".death-person");
-
-// Swal.fire("anas")
 
 const promo = [
   "antoine",
